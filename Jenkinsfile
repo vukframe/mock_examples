@@ -11,5 +11,11 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
+
+        stage('Deploy') {
+            steps {
+                sh 'mvn -B -DskipTests deploy'
+            }
+        }
     }
 }
